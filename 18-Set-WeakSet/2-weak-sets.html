@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brunch with Sets</title>
+</head>
+<body>
+<script>
+
+let dog1 = { name: 'Snickers', age: 3 }
+let dog2 = { name: 'Sunny', age: 1 }
+
+// WeakSet can store Objects ONLY
+// Can't be iterated over: no .values() etc
+// No .clear() -- WeakSet items are automatically garbage collected as soon as
+// nothing references to that item
+const weakSauce = new WeakSet([dog1, dog2])
+
+console.log(weakSauce)
+dog1 = null
+console.log(weakSauce)
+setTimeout(() => console.log(weakSauce), 1000)
+
+
+// weakSauce.delete(dog2)
+
+</script>
+</body>
+</html>

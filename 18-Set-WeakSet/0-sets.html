@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sets</title>
+</head>
+<body>
+<script>
+
+const people = new Set()
+people.add('Wes')
+people.add('Snickers')
+people.add('Kait')
+
+console.log(people.size)
+
+people.delete('Stan') // returns "false"
+people.delete('Wes') // returns "true"
+
+// Empties the set
+// people.clear()
+
+// Returns an iterator (generator)
+people.values()
+people.keys()
+people.entries()
+
+for (const person of people) {
+  console.log(person)
+}
+
+const students = new Set(['Stan', 'Mike', 'Que'])
+
+const dogs = ['Snickers', 'Sunny']
+const dogSet = new Set(dogs)
+
+// Check if item exists in set
+students.has('Mike') // returns "true/false"
+
+// Use for-of loop to loop over items
+students['Mike'] // returns "undefined"
+
+</script>
+</body>
+</html>
