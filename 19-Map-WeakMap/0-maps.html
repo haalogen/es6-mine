@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maps!</title>
+</head>
+<body>
+<script>
+
+const dogs = new Map()
+
+dogs.set('Snickers', 3)
+dogs.set('Sunny', 2)
+dogs.set('Hugo', 10)
+
+console.log(dogs.has('Snickers'))
+console.log(dogs.get('Hugo'))
+
+dogs.delete('Sunny')
+
+// Looping over Map
+// 1) forEach()
+dogs.forEach((value, key, collection) => console.log(value, key, collection))
+
+// 2) for-of loop
+for (const [key, value] of dogs) {
+  console.log(key, value);
+}
+
+// Clear Map
+// dogs.clear()
+
+</script>
+</body>
+</html>
